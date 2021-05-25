@@ -31,6 +31,10 @@ public class Empresa {
     @JoinColumn(name = "empresa_id")
     private Set<Funcionario> funcionarios = new HashSet<Funcionario>();
 
+    public Empresa() {
+        // TODO Auto-generated constructor stub
+    }
+
     public Empresa(String nome, String cnpj, String endereco) {
         super();
         this.nome = nome;
@@ -79,6 +83,10 @@ public class Empresa {
     public void removerFuncionario(Funcionario f) {
         this.funcionarios.remove(f);
         f.setEmpresa(null);
+    }
+
+    public Set<Funcionario> getFuncionarios() {
+        return funcionarios;
     }
 
 }

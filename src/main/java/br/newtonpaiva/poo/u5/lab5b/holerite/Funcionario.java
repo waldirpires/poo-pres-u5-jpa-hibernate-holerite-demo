@@ -26,6 +26,10 @@ public class Funcionario {
     @ManyToOne
     private Empresa empresa;
 
+    public Funcionario() {
+        // TODO Auto-generated constructor stub
+    }
+
     public Funcionario(String codigo, String nome, String cpf, LocalDate dataAdm, String cbo) {
         super();
         this.codigo = codigo;
